@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import './Contact.css';
 
 const Contact = () => {
     const emailRef = useRef(null);
+    const submitRef = useRef(null);
     const checkEmailValidity = () => {
         const regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
         const value = emailRef.current.value;
@@ -10,22 +12,45 @@ const Contact = () => {
             emailRef.current.classList.remove('contact_input_error');
         } else {
             emailRef.current.classList.add('contact_input_error');
-            alert('Please enter valid email.')
+            alert('Please enter valid email.');
         }
+    };
+    const sendEmail = (event) => {
+        event.preventDefault();
+        if (emailRef.current.classList.value.includes('contact_input_error')) {
+            alert('Please enter valid email.');
+            return;
+        }
+        const form = event.target;
+        submitRef.current.value = 'Sending...';
+        const formData = new FormData(form);
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, data, process.env.REACT_APP_USER_ID)
+            .then(() => {
+                form.reset();
+                submitRef.current.value = 'Send Message';
+                alert('Your message has been sent successfully!');
+            }, (error) => {
+                submitRef.current.value = 'Send Message';
+                alert(JSON.stringify(error));
+            });
     };
     return (
         <div className="contact section">
             <span className="section-subtitle">Contact Me</span>
             <h2 className="section-title">Get In Touch</h2>
             <div className="contact_container bd-grid">
-                <form className="contact_form" id="contactForm">
+                <form className="contact_form" id="contactForm" onSubmit={sendEmail}>
                     <div className="contact_inputs">
-                        <input type="text" placeholder="Name" className="contact_input" name="fromName" id="fromName" required />
-                        <input type="mail" placeholder="Email" className="contact_input" name="fromEmail" id="fromEmail" ref={emailRef} onBlur={checkEmailValidity} required />
+                        <input type="text" placeholder="Name" className="contact_input" name="fromName" required />
+                        <input type="mail" placeholder="Email" className="contact_input" name="fromEmail" ref={emailRef} onBlur={checkEmailValidity} required />
                     </div>
-                    <input type="text" placeholder="Subject" className="contact_input" name="subject" id="subject" required />
-                    <textarea cols="30" rows="10" placeholder="Message" className="contact_input" name="message" id="message"></textarea>
-                    <input type="submit" value="Send Message" className="send_message_btn" id="submitButton" />
+                    <input type="text" placeholder="Subject" className="contact_input" name="subject" required />
+                    <textarea cols="30" rows="10" placeholder="Message" className="contact_input" name="message" required></textarea>
+                    <input ref={submitRef} type="submit" value="Send Message" className="send_message_btn" />
                 </form>
                 <div>
                     <div className="about_information">

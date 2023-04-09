@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { About, Contact, Education, Experience, Home, NavBar, Skills } from './index';
+import { About, Contact, Education, Experience, Home, NavBar, NotFound, Skills } from './index';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -43,6 +43,7 @@ const App = () => {
           <Route path="/education" element={<Education />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <div className="darkMode_container" data-label={theme.dataLabel}>

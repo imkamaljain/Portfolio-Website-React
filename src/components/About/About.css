@@ -42,7 +42,7 @@
     font-size: var(--small-font-size);
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 768px) {
     .about_data {
         text-align: initial;
         padding: 0 3rem 0;

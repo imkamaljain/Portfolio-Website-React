@@ -200,7 +200,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 768px) {
   .section {
     min-height: calc(100vh - var(--header-height));
   }

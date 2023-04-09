@@ -31,7 +31,7 @@
     background-color: var(--first-color);
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 768px) {
 
     .skills_container {
         grid-template-columns: repeat(2, 1fr);

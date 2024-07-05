@@ -12,7 +12,7 @@ const Experience = () => {
                     <div className="education_content" key={index}>
                         <div>
                             <h3 className="education_year">{item.period}</h3>
-                            <span className="education_university">{item.jobType}</span>
+                            <span className="education_university">{item.jobType} ● {item.location} ● {item.locationType}</span>
                         </div>
                         <div className="education_time">
                             <span className="education_rounder"></span>

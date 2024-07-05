@@ -2,28 +2,44 @@ export const config = {
     'navBar': ['home', 'about', 'experience', 'education', 'skills', 'contact'],
     'experience': [
         {
-            'period': 'January 2023 - Present',
+            'period': 'July 2024 - Present',
+            'jobType': 'Full-time',
+            'name': 'MedPiper Technologies, Inc.',
+            'designation': 'Software Development Engineer 3',
+            'location': 'Bangalore',
+            'locationType': 'On-site'
+        },
+        {
+            'period': 'January 2023 - June 2024',
             'jobType': 'Full-time',
             'name': 'Temenos',
-            'designation': 'Senior Product Engineer'
+            'designation': 'Senior Product Engineer',
+            'location': 'Bangalore',
+            'locationType': 'Hybrid'
         },
         {
             'period': 'July 2022 - December 2022',
             'jobType': 'Full-time',
             'name': 'Temenos',
-            'designation': 'Product Engineer - Development'
+            'designation': 'Product Engineer - Development',
+            'location': 'Hyderabad',
+            'locationType': 'Hybrid'
         },
         {
-            'period': 'August 2020 - June 2022',
+            'period': 'July 2020 - June 2022',
             'jobType': 'Full-time',
             'name': 'Temenos',
-            'designation': 'Software Development Engineer'
+            'designation': 'Software Development Engineer',
+            'location': 'Hyderabad',
+            'locationType': 'Hybrid'
         },
         {
             'period': 'April 2019 - July 2020',
             'jobType': 'Internship',
             'name': 'Kony, Inc.',
-            'designation': 'Associate Software Development Engineer'
+            'designation': 'Associate Software Development Engineer',
+            'location': 'Hyderabad',
+            'locationType': 'On-site'
         }
     ],
     'education': [

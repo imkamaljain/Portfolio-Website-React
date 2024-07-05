@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { config } from '../../assets/config';
 import profileImage from '../../assets/profile.jpg';
 import resume from '../../assets/resume.pdf';
 import './Home.css';
@@ -36,7 +37,7 @@ const Home = () => {
                     <img src={profileImage} alt="Profile not available" />
                 </div>
                 <h1 className="home_title">Kamal Jain</h1>
-                <span className="home_profession">Senior Product Engineer</span>
+                <span className="home_profession">{config.experience[0].designation}</span>
                 <div className="home_social">
                     <a href="https://www.linkedin.com/in/-kamal-jain" className="home_social-link" target="blank"><i className='bx bxl-linkedin'></i></a>
                     <a href="https://www.github.com/imkamaljain" className="home_social-link" target="blank"><i className='bx bxl-github'></i></a>

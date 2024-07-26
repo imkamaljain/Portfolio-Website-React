@@ -6,7 +6,8 @@
     width: 100%;
     padding: 1rem;
     outline: none;
-    background-color: var(--background-color-light);
+    background-color: var(--input-color);
+    color: var(--text-color);
     font-size: var(--normal-font-size);
     margin-bottom: var(--mb-2);
     border-radius: 0.5rem;
@@ -29,7 +30,7 @@
 
 .contact_subtitle {
     font-size: var(--h3-font-size);
-    color: var(--background-color-dark);
+    color: var(--heading-color);
     margin-bottom: var(--mb-1);
 }
 
@@ -46,8 +47,8 @@
     cursor: pointer;
     width: 100%;
     display: inline-block;
-    background-color: var(--first-color);
-    color: var(--background-color-lighten);
+    background-color: var(--title-color);
+    color: var(--background-page-color);
     padding: 1rem 2rem;
     font-weight: var(--font-semi-bold);
     border-radius: 0.5rem;
@@ -55,8 +56,8 @@
 }
 
 .footer {
-    background-color: var(--first-color);
-    color: var(--background-color-lighten);
+    background-color: var(--title-color);
+    color: var(--background-page-color);
     text-align: center;
     padding: 4rem 0 0;
     flex-grow: 1;
@@ -79,8 +80,8 @@
 
 .footer_link {
     display: inline-flex;
-    background-color: var(--background-color-lighten);
-    color: var(--first-color);
+    background-color: var(--background-page-color);
+    color: var(--title-color);
     font-size: 1.1rem;
     border-radius: 50%;
     padding: 0.4rem;
@@ -89,8 +90,8 @@
 }
 
 .footer_link:hover {
-    background-color: var(--first-color);
-    color: var(--background-color-lighten);
+    background-color: var(--title-color);
+    color: var(--background-page-color);
 }
 
 .footer_copy {
@@ -118,7 +119,7 @@
     }
 
     .footer_container {
-        background-color: var(--first-color);
+        background-color: var(--title-color);
         padding: 3rem 0;
         border-radius: 0.5rem;
     }

@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--background-color-lighten);
+    background-color: var(--navbar-text-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,18 +24,14 @@
     padding: 3rem;
     display: flex;
     align-items: center;
-    background-color: var(--first-color);
+    background-color: var(--navbar-bg-color);
     transition: 0.5s;
 }
 
 .nav_logo {
     font-size: 1.3rem;
-    color: var(--first-color);
+    color: var(--title-color);
     cursor: pointer;
-}
-
-.nav_logo:hover {
-    color: var(--background-color-dark);
 }
 
 .nav_close {
@@ -43,7 +39,7 @@
     top: 1rem;
     right: 1rem;
     font-size: 2rem;
-    color: var(--background-color-lighten);
+    color: var(--background-page-color);
     cursor: pointer;
 }
 
@@ -58,22 +54,21 @@
 .nav_link {
     font-size: 1.25rem;
     text-transform: uppercase;
-    color: var(--background-color-lighten);
+    color: var(--navbar-text-color);
     font-weight: var(--font-bold);
     transition: 0.3s;
 }
 
 .nav_link:hover {
-    color: var(--background-color-lighten);
-    background: var(--text-color);
-    border: 10px solid var(--text-color);
+    background: var(--navbar-hover-color); 
+    border: 10px solid var(--navbar-hover-color);
     border-radius: 5px;
     border-width: 5px;
     cursor: pointer;
 }
 
 .nav_toggle {
-    color: var(--background-color-dark);
+    color: var(--heading-color);
     font-size: 1.3rem;
     cursor: pointer;
 }

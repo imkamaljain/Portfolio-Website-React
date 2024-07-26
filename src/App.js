@@ -10,26 +10,39 @@ const App = () => {
     dataLabel: 'Switch to Dark Mode'
   });
   const toggleTheme = () => {
+    const style = document.documentElement.style;
     if (theme.mode === 'light') {
       setTheme({
         mode: 'dark',
         className: 'bx bxs-sun',
         dataLabel: 'Switch to Light Mode'
       });
-      document.documentElement.style.setProperty('--background-color-light', '#000000');
-      document.documentElement.style.setProperty('--background-color-lighten', '#290F09');
-      document.documentElement.style.setProperty('--background-color-dark', '#EAE7E6');
-      document.documentElement.style.setProperty('--background-color-darken', '#FFFAFA');
+      style.setProperty('--background-page-color', '#131313');
+      style.setProperty('--navbar-bg-color', '#3B6A4A');
+      style.setProperty('--navbar-hover-color', '#5F9E80');
+      style.setProperty('--title-color', '#2ac670');
+      style.setProperty('--subtitle-color', '#7bf080');
+      style.setProperty('--text-color', '#fff');
+      style.setProperty('--image-circle-color', 'rgba(123, 240, 128, 0.8)');
+      style.setProperty('--input-color', '#000000');
+      style.setProperty('--heading-color', '#EAE7E6');
+      style.setProperty('--skills-bg-image', 'linear-gradient(140deg, rgba(123, 240, 128, 0.15), rgba(255, 255, 255, .1) 58%)');
     } else {
       setTheme({
         mode: 'light',
         className: 'bx bxs-moon',
         dataLabel: 'Switch to Dark Mode'
       });
-      document.documentElement.style.setProperty('--background-color-light', '#EAE7E6');
-      document.documentElement.style.setProperty('--background-color-lighten', '#FFFAFA');
-      document.documentElement.style.setProperty('--background-color-dark', '#000000');
-      document.documentElement.style.setProperty('--background-color-darken', '#290F09');
+      style.setProperty('--background-page-color', '#FFFAFA');
+      style.setProperty('--navbar-bg-color', '#293276');
+      style.setProperty('--navbar-hover-color', '#4176a4');
+      style.setProperty('--title-color', '#293276');
+      style.setProperty('--subtitle-color', '#290f09');
+      style.setProperty('--text-color', '#4176a4');
+      style.setProperty('--image-circle-color', 'rgba(0, 62, 117, 0.8)');
+      style.setProperty('--input-color', '#EAE7E6');
+      style.setProperty('--heading-color', '#000000');
+      style.setProperty('--skills-bg-image', '');
     }
   };
   return (

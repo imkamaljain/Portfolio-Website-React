@@ -7,11 +7,16 @@
   --font-semi-bold: 600;
   --font-bold: 700;
   --text-color: #4176a4;
-  --first-color: #293276;
-  --background-color-dark: #000000;
-  --background-color-darken: #290f09;
-  --background-color-light: #eae7e6;
-  --background-color-lighten: #fffafa;
+  --title-color: #293276;
+  --subtitle-color: #290f09;
+  --navbar-bg-color:#293276;
+  --navbar-text-color:#fffafa;
+  --navbar-hover-color:#4176a4;
+  --background-page-color: #fffafa;
+  --image-circle-color: rgba(0, 62, 117, 0.8);
+  --heading-color: #000000;
+  --skills-bg-image: '';
+  --input-color: #eae7e6;
   --placeholder-color: #a9a95a;
   --error-color: #ff0033;
   --body-font: "Poppins", sans-serif;
@@ -55,7 +60,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  background-color: var(--background-color-lighten);
+  background-color: var(--background-page-color);
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -98,7 +103,7 @@ img {
 
 .section-title {
   font-size: var(--h1-font-size);
-  color: var(--first-color);
+  color: var(--title-color);
   margin-bottom: var(--mb-3);
   text-align: center;
 }
@@ -106,7 +111,7 @@ img {
 .section-subtitle {
   display: block;
   font-size: var(--normal-font-size);
-  color: var(--background-color-darken);
+  color: var(--subtitle-color);
   text-align: center;
   font-weight: var(--font-bold);
   margin-bottom: 0.25rem;

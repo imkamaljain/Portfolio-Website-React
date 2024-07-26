@@ -18,7 +18,7 @@
 
 .home_img:before {
     content: "";
-    border: 20px solid rgba(0, 62, 117, 0.8);
+    border: 20px solid var(--image-circle-color);
     border-radius: 50%;
     height: 160px;
     width: 160px;
@@ -60,13 +60,13 @@
 
 .home_title {
     font-size: var(--h1-font-size);
-    color: var(--first-color);
+    color: var(--title-color);
     font-weight: var(--font-semi-bold);
 }
 
 .home_profession {
     font-size: var(--small-font-size);
-    color: var(--background-color-dark);
+    color: var(--title-color);
     margin-bottom: var(--mb-5);
 }
 
@@ -76,8 +76,8 @@
 
 .home_social-link {
     display: inline-flex;
-    background-color: var(--first-color);
-    color: var(--background-color-lighten);
+    background-color: var(--title-color);
+    color: var(--background-page-color);
     font-size: 2rem;
     border-radius: 50%;
     padding: 0.5rem;
@@ -86,14 +86,14 @@
 }
 
 .home_social-link:hover {
-    background-color: var(--background-color-lighten);
-    color: var(--first-color);
+    background-color: var(--background-page-color);
+    color: var(--title-color);
 }
 
 .download_btn {
     display: inline-block;
-    background-color: var(--first-color);
-    color: var(--background-color-lighten);
+    background-color: var(--title-color);
+    color: var(--background-page-color);
     padding: 1rem 2rem;
     font-weight: var(--font-semi-bold);
     border-radius: 0.5rem;
@@ -105,10 +105,10 @@
 
 .downloading_btn {
     display: inline-block;
-    background-color: var(--background-color-lighten);
-    color: var(--first-color);
+    background-color: var(--background-page-color);
+    color: var(--title-color);
     padding: 1rem 2rem;
-    border: solid 2px var(--first-color);
+    border: solid 2px var(--title-color);
     border-radius: 0.5rem;
     width: 15rem;
     cursor: no-drop;

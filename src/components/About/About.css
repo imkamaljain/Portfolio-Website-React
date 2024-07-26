@@ -14,12 +14,6 @@
     margin-bottom: var(--mb-4);
 }
 
-.about_information-title {
-    font-size: var(--h3-font-size);
-    color: var(--background-color-dark);
-    margin-bottom: var(--mb-2);
-}
-
 .about_information-data {
     display: flex;
     align-items: center;
@@ -29,7 +23,7 @@
 
 .about_information-icon {
     font-size: 1.5rem;
-    color: var(--first-color);
+    color: var(--title-color);
     margin-right: var(--mb-4);
 }
 

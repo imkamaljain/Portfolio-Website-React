@@ -5,6 +5,7 @@
 .skills_content {
     border-radius: 5px;
     box-shadow: 0 2px 10px 0 rgb(70 69 69 / 20%);
+    background-image: var(--skills-bg-image);
 }
 
 .skills_content:hover {
@@ -13,7 +14,7 @@
 
 .skills_subtitle {
     font-size: var(--h3-font-size);
-    color: var(--background-color-dark);
+    color: var(--heading-color);
     margin: var(--mb-1) var(--mb-2);
 }
 
@@ -28,7 +29,7 @@
     position: absolute;
     bottom: -0.75rem;
     height: 0.25rem;
-    background-color: var(--first-color);
+    background-color: var(--title-color);
 }
 
 @media screen and (min-width: 768px) {

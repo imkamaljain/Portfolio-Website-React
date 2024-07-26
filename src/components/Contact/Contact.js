@@ -54,12 +54,12 @@ const Contact = () => {
                 </form>
                 <div>
                     <div className="about_information">
-                        <h3 className="about_information-title">Phone</h3>
+                        <h3 className="contact_subtitle">Phone</h3>
                         <div className="about_information-data">
                             <i className='bx bx-phone about_information-icon' ></i>
                             <span>9548132183</span>
                         </div>
-                        <h3 className="about_information-title">Email</h3>
+                        <h3 className="contact_subtitle">Email</h3>
                         <div className="about_information-data">
                             <i className='bx bx-envelope about_information-icon' ></i>
                             <span>kamaljain1423@gmail.com</span>

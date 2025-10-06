@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { About, Contact, Education, Experience, Home, NavBar, NotFound, Skills } from './index';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BsMoon, BsSun } from 'react-icons/bs';
 import './App.css';
 
 const App = () => {
   const [theme, setTheme] = useState({
     mode: 'light',
-    className: 'bx bxs-moon',
-    dataLabel: 'Switch to Dark Mode'
+    icon: <BsMoon />,
   });
+  
+  // Initialize theme attribute on component mount
+  useEffect(() => {
+    document.body.setAttribute('data-theme', 'light');
+  }, []);
   const toggleTheme = () => {
     const style = document.documentElement.style;
+    const body = document.body;
     if (theme.mode === 'light') {
       setTheme({
         mode: 'dark',
-        className: 'bx bxs-sun',
-        dataLabel: 'Switch to Light Mode'
+        icon: <BsSun />,
       });
       style.setProperty('--background-page-color', '#131313');
       style.setProperty('--navbar-bg-color', '#3B6A4A');
@@ -27,11 +32,11 @@ const App = () => {
       style.setProperty('--input-color', '#000000');
       style.setProperty('--heading-color', '#EAE7E6');
       style.setProperty('--skills-bg-image', 'linear-gradient(140deg, rgba(123, 240, 128, 0.15), rgba(255, 255, 255, .1) 58%)');
+      body.setAttribute('data-theme', 'dark');
     } else {
       setTheme({
         mode: 'light',
-        className: 'bx bxs-moon',
-        dataLabel: 'Switch to Dark Mode'
+        icon: <BsMoon />
       });
       style.setProperty('--background-page-color', '#FFFAFA');
       style.setProperty('--navbar-bg-color', '#293276');
@@ -43,12 +48,14 @@ const App = () => {
       style.setProperty('--input-color', '#EAE7E6');
       style.setProperty('--heading-color', '#000000');
       style.setProperty('--skills-bg-image', '');
+      body.setAttribute('data-theme', 'light');
     }
   };
   return (
     <>
       <BrowserRouter>
-        <NavBar />
+        <NavBar>
+        </NavBar>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -59,9 +66,9 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      <div className="darkMode_container" data-label={theme.dataLabel}>
+      <div className="darkMode_container">
         <button onClick={toggleTheme}>
-          <i className={theme.className}></i>
+          {theme.icon}
         </button>
       </div>
     </>

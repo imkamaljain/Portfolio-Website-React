@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { config } from '../../assets/config';
+import { BiMenu, BiX, BiHome } from 'react-icons/bi';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -45,14 +46,14 @@ const NavBar = () => {
             ? <header className="l-header">
                 <nav className="nav bd-grid">
                     <div className="nav_toggle" id="nav-toggle" onClick={toggleNavBar}>
-                        <i className="bx bx-menu"></i>
+                        <BiMenu />
                     </div>
                     <div>
-                        <a className="nav_logo" onClick={() => navigate('/')}><i className='bx bxs-home'></i></a>
+                        <a className="nav_logo" onClick={() => navigate('/')}><BiHome /></a>
                     </div>
                     <div className="nav_menu" id="nav-menu" ref={navBarRef}>
                         <div className="nav_close" id="nav-close" onClick={toggleNavBar}>
-                            <i className="bx bx-x"></i>
+                            <BiX />
                         </div>
                         <ul className="nav_list">
                             {config.navBar.map((item, idx) => (

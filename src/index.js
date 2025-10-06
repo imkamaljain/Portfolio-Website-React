@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import App from './App';
-
-import 'boxicons/css/boxicons.min.css';
 
 export { default as About } from './components/About/About';
 export { default as Contact } from './components/Contact/Contact';
@@ -14,4 +12,5 @@ export { default as NavBar } from './components/NavBar/NavBar';
 export { default as NotFound } from './components/NotFound/NotFound';
 export { default as Skills } from './components/Skills/Skills';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);

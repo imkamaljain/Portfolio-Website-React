@@ -12,7 +12,7 @@ export const config = {
         {
             'period': 'January 2023 - June 2024',
             'jobType': 'Full-time',
-            'name': 'Temenos',
+            'name': 'Temenos (Kony, Inc.)',
             'designation': 'Senior Product Engineer',
             'location': 'Bangalore',
             'locationType': 'Hybrid'
@@ -20,7 +20,7 @@ export const config = {
         {
             'period': 'July 2020 - December 2022',
             'jobType': 'Full-time',
-            'name': 'Temenos',
+            'name': 'Temenos (Kony, Inc.)',
             'designation': 'Product Engineer',
             'location': 'Hyderabad',
             'locationType': 'Hybrid'
@@ -56,7 +56,7 @@ export const config = {
     ],
     'skills': [
         {
-            'title': 'Programming',
+            'title': 'Languages',
             'summary': [
                 {
                     'name': 'Java',
@@ -82,42 +82,106 @@ export const config = {
                 {
                     'name': 'NestJS',
                     'score': '80%'
-                }
-            ]
-        },
-        {
-            'title': 'Tools',
-            'summary': [
-                {
-                    'name': 'Eclipse',
-                    'score': '80%'
                 },
                 {
-                    'name': 'MySql Workbench',
-                    'score': '80%'
-                },
-                {
-                    'name': 'Postman',
+                    'name': 'Express.js',
                     'score': '85%'
-                }
+                },
             ]
         },
         {
-            'title': 'Version Control',
+            'title': 'Frontend',
             'summary': [
                 {
-                    'name': 'Git',
+                    'name': 'React.js',
+                    'score': '65%'
+                },
+                {
+                    'name': 'Next.js',
+                    'score': '60%'
+                },
+            ]
+        },
+        {
+            'title': 'Databases',
+            'summary': [
+                {
+                    'name': 'PostgreSQL',
+                    'score': '85%'
+                },
+                {
+                    'name': 'MySQL',
+                    'score': '85%'
+                },
+                {
+                    'name': 'MongoDB',
+                    'score': '85%'
+                },
+                {
+                    'name': 'Redis',
+                    'score': '85%'
+                },
+            ]
+        },
+        {
+            'title': 'Cloud & DevOps',
+            'summary': [
+                {
+                    'name': 'Microsoft Azure',
+                    'score': '80%'
+                },
+                {
+                    'name': 'AWS',
+                    'score': '80%'
+                },
+                {
+                    'name': 'Docker',
+                    'score': '80%'
+                },
+                {
+                    'name': 'Jenkins',
                     'score': '75%'
                 },
                 {
-                    'name': 'GitHub',
+                    'name': 'Git',
+                    'score': '90%'
+                }
+            ]
+        },
+        {
+            'title': 'Observability',
+            'summary': [
+                {
+                    'name': 'Prometheus',
                     'score': '80%'
                 },
                 {
-                    'name': 'Bitbucket',
+                    'name': 'Grafana',
+                    'score': '80%'
+                },
+                {
+                    'name': 'Alertmanager',
                     'score': '85%'
                 }
             ]
-        }
-    ]
+        },
+        {
+            'title': 'Other',
+            'summary': [
+                {
+                    'name': 'Microservices',
+                    'score': '80%'
+                },
+                {
+                    'name': 'Distributed Systems',
+                    'score': '80%'
+                },
+                {
+                    'name': 'ISO Compliance',
+                    'score': '85%'
+                }
+            ]
+        },
+    ],
+    'resume_url': 'https://drive.google.com/uc?export=download&id=1_3opXaC80tiXZYA3Wu5Q4wAjMkJxyjPi'
 };

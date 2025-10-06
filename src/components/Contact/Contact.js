@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { FaLocationDot,FaPhone } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 import './Contact.css';
 
 const Contact = () => {
@@ -56,17 +59,17 @@ const Contact = () => {
                     <div className="about_information">
                         <h3 className="contact_subtitle">Phone</h3>
                         <div className="about_information-data">
-                            <i className='bx bx-phone about_information-icon' ></i>
+                            <FaPhone className='about_information-icon' />
                             <span>9548132183</span>
                         </div>
                         <h3 className="contact_subtitle">Email</h3>
                         <div className="about_information-data">
-                            <i className='bx bx-envelope about_information-icon' ></i>
+                            <IoMdMail className='about_information-icon' />
                             <span>kamaljain1423@gmail.com</span>
                         </div>
                         <h3 className="contact_subtitle">Address</h3>
                         <div className="about_information-data">
-                            <i className='bx bx-map about_information-icon'></i>
+                            <FaLocationDot className='about_information-icon' />
                             <span>Bangalore, Karnataka,<br />India</span>
                         </div>
                     </div>
@@ -77,9 +80,9 @@ const Contact = () => {
                     <h1 className="footer_title">Thank You</h1>
                     <p className="footer_description">This is my personal website, connect me here.</p>
                     <div className="footer_social">
-                        <a href="https://www.facebook.com/kamaljain1423" className="footer_link" target="blank"><i className='bx bxl-facebook'></i></a>
-                        <a href="https://www.instagram.com/_kamal_jain" className="footer_link" target="blank"><i className='bx bxl-instagram'></i></a>
-                        <a href="https://www.twitter.com/_kamal_jain" className="footer_link" target="blank"><i className='bx bxl-twitter'></i></a>
+                        <a href="https://www.facebook.com/kamaljain1423" className="footer_link" target="blank"><BsFacebook /></a>
+                        <a href="https://www.instagram.com/_kamal_jain" className="footer_link" target="blank"><BsInstagram /></a>
+                        <a href="https://www.twitter.com/_kamal_jain" className="footer_link" target="blank"><BsTwitter /></a>
                     </div>
                     <p className="footer_copy">All rights reserved.</p>
                 </div>

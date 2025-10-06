@@ -1,6 +1,20 @@
 .home_container {
     height: calc(100vh - var(--header-height));
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(41, 50, 118, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .home_data {
@@ -9,27 +23,28 @@
     align-items: center;
     height: max-content;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .home_img {
     position: relative;
     margin-bottom: var(--mb-2);
+    animation: float 6s ease-in-out infinite;
 }
 
-.home_img:before {
+.home_img::before {
     content: "";
-    border: 20px solid var(--image-circle-color);
+    border: 3px solid var(--image-circle-color);
     border-radius: 50%;
-    height: 160px;
-    width: 160px;
+    height: 166px;
+    width: 166px;
     position: absolute;
-    left: 0;
-    -webkit-animation: pulsate 1.s ease-out;
-    animation: pulsate 1.5s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10;
+    box-shadow: 0 0 20px rgba(123, 240, 128, 0.2);
 }
 
 .home_img img {
@@ -39,68 +54,99 @@
     width: 160px;
     padding: 0;
     margin: 0;
-    border: 15px solid transparent;
+    border: 3px solid var(--background-page-color);
     z-index: 20;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    /* background-image: url(../../assets/profile.jpg);
-    background-size: cover;
-    background-repeat: no-repeat; */
+    transition: var(--transition-standard);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
 }
 
 .home_img:hover img {
-    -webkit-transform: scale(1.06, 1.06);
-    transform: scale(1.06, 1.06);
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.home_img:hover:before {
-    -webkit-animation: none;
-    animation: none;
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .home_title {
     font-size: var(--h1-font-size);
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
+    font-family: var(--heading-font);
+    margin-bottom: var(--mb-1);
+    letter-spacing: 1px;
 }
 
 .home_profession {
     font-size: var(--small-font-size);
     color: var(--title-color);
     margin-bottom: var(--mb-5);
+    font-family: var(--heading-font);
+    letter-spacing: 1px;
 }
 
 .home_social {
     margin-bottom: 5rem;
+    display: flex;
+    gap: var(--mb-2);
+    justify-content: center;
 }
 
 .home_social-link {
     display: inline-flex;
-    background-color: var(--title-color);
+    background: var(--gradient-dark);
     color: var(--background-page-color);
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: 0.7rem;
     margin: 0 var(--mb-1);
-    transition: 0.3s;
+    transition: var(--transition-standard);
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--modern-shadow);
 }
 
 .home_social-link:hover {
-    background-color: var(--background-page-color);
+    transform: translateY(-5px);
+    box-shadow: var(--modern-shadow-hover);
+    background: var(--background-page-color);
     color: var(--title-color);
 }
 
 .download_btn {
     display: inline-block;
-    background-color: var(--title-color);
+    background: var(--gradient-dark);
     color: var(--background-page-color);
     padding: 1rem 2rem;
     font-weight: var(--font-semi-bold);
-    border-radius: 0.5rem;
-    transition: 0.3s;
+    border-radius: var(--border-radius);
+    transition: var(--transition-standard);
     width: 15rem;
     border: none;
     cursor: pointer;
+    font-family: var(--heading-font);
+    letter-spacing: 1px;
+    box-shadow: var(--modern-shadow);
+    text-transform: uppercase;
+}
+
+.download_btn:hover {
+    box-shadow: var(--modern-shadow-hover);
+    transform: translateY(-3px);
+    background: var(--background-page-color);
+    color: var(--title-color);
 }
 
 .downloading_btn {
@@ -109,9 +155,12 @@
     color: var(--title-color);
     padding: 1rem 2rem;
     border: solid 2px var(--title-color);
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
     width: 15rem;
     cursor: no-drop;
+    font-family: var(--heading-font);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @-webkit-keyframes pulsate {

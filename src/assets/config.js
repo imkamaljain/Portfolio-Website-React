@@ -18,18 +18,10 @@ export const config = {
             'locationType': 'Hybrid'
         },
         {
-            'period': 'July 2022 - December 2022',
+            'period': 'July 2020 - December 2022',
             'jobType': 'Full-time',
             'name': 'Temenos',
-            'designation': 'Product Engineer - Development',
-            'location': 'Hyderabad',
-            'locationType': 'Hybrid'
-        },
-        {
-            'period': 'July 2020 - June 2022',
-            'jobType': 'Full-time',
-            'name': 'Temenos',
-            'designation': 'Software Development Engineer',
+            'designation': 'Product Engineer',
             'location': 'Hyderabad',
             'locationType': 'Hybrid'
         },
@@ -64,37 +56,20 @@ export const config = {
     ],
     'skills': [
         {
-            'title': 'Web Development',
-            'summary': [
-                {
-                    'name': 'HTML/CSS',
-                    'score': '70%'
-                },
-                {
-                    'name': 'JavaScript',
-                    'score': '75%'
-                },
-                {
-                    'name': 'React.js',
-                    'score': '60%'
-                }
-            ]
-        },
-        {
             'title': 'Programming',
             'summary': [
                 {
                     'name': 'Java',
-                    'score': '75%'
+                    'score': '70%'
                 },
                 {
                     'name': 'JavaScript',
-                    'score': '80%'
+                    'score': '85%'
                 },
                 {
-                    'name': 'C++',
-                    'score': '70%'
-                }
+                    'name': 'TypeScript',
+                    'score': '80%'
+                },
             ]
         },
         {
@@ -102,11 +77,11 @@ export const config = {
             'summary': [
                 {
                     'name': 'Node.js',
-                    'score': '65%'
+                    'score': '85%'
                 },
                 {
-                    'name': 'MySql',
-                    'score': '70%'
+                    'name': 'NestJS',
+                    'score': '80%'
                 }
             ]
         },

@@ -2,7 +2,15 @@ export const config = {
     'navBar': ['home', 'about', 'experience', 'education', 'skills', 'contact'],
     'experience': [
         {
-            'period': 'July 2024 - Present',
+            'period': 'November 2025 - Present',
+            'jobType': 'Full-time',
+            'name': 'Relanto',
+            'designation': 'Senior Software Engineer',
+            'location': 'Bangalore',
+            'locationType': 'On-site'
+        },
+        {
+            'period': 'July 2024 - November 2025',
             'jobType': 'Full-time',
             'name': 'MedPiper Technologies, Inc.',
             'designation': 'Software Development Engineer 3',
